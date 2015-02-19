@@ -5,7 +5,7 @@ import (
   "io/ioutil"
 )
 
-func GetMetaData(url string) (string, error) {
+func getMetaData(url string) (string, error) {
   res, err := http.Get("http://169.254.169.254/latest/meta-data" + url)
   defer res.Body.Close()
   if err != nil {
